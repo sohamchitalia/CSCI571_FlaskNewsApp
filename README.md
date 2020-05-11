@@ -3,7 +3,7 @@
 ## Project Description
 
 ### About
-Creating a news website using Google News API to display news from various sources and allow users to search for news based on parameters such as:
+Creating a website using Google News API to display news from various sources and allow users to search for news based on parameters such as:
 
  - Keywords
  - Publish Date Range
