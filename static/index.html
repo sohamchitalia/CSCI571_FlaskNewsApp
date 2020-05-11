@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Page</title>
+	<script type="text/javascript" src="/static/index.js"></script>
+	<script src="https://d3js.org/d3.v4.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
+	<link rel="stylesheet" type="text/css" href="/static/index.css">
+	
+</head>
+<body onload="loadDoc()" style="font-family: serif;">
+	<div id ="outerwrapper">
+		<div id="buttons">
+			<div class="btn-group">
+				<button id="googleNewsButton" onclick="googleNewFun()" style="font-size: 14px; font-family: Georgia, serif;">Google News</button>
+				<button id="searchButton" style="border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; font-size: 14px; font-family: Georgia, serif;" onclick="searchFun()">Search</button>
+			</div>
+		</div>
+		<div id = "wrapper">
+			<div id = "firstsection">
+				<div class="flex-container2">
+						<div id="slider" style="width:55%; cursor: pointer;">
+							<div id="slideshow-container">
+								<div class="mySlides fade imgtext" id="1" style="height: 270px;">
+								 	<img src="" style="width:100%; height: 270px;">
+								 	<div class="content">
+										<h6 style="font-family: serif; margin-top: 0px; font-size: 21px;"></h6>
+										<p style="margin-top: -30px;"></p>
+									</div>
+								</div>
+
+								<div class="mySlides fade imgtext" id="2" style="height: 270px;">
+								 	<img src="" style="width:100%; height: 270px; object-fit: cover;">
+								 	<div class="content">
+										<h6 style="font-family: serif; margin-top: 0px; font-size: 21px;"></h6>
+										<p style="margin-top: -30px;"></p>
+									</div>
+								</div>
+
+								<div class="mySlides fade imgtext" id="3" style="height: 270px;">
+									<img src="" style="width:100%; height: 270px; object-fit: cover;">
+									<div class="content">
+										<h6 style="font-family: serif; margin-top: 0px; font-size: 21px;"></h6>
+										<p style="margin-top: -35px;"></p>
+									</div>
+								</div>
+								<div class="mySlides fade imgtext" id="4" style="height: 270px;">
+									<img src="" style="width:100%; height: 270px; object-fit: cover;">
+									<div class="content">
+										<h6 style="font-family: serif; margin-top: 0px; font-size: 21px;"></h6>
+										<p style="margin-top: -30px;"></p>
+									</div>
+								</div>
+								<div class="mySlides fade imgtext" id="5" style="height: 270px;">
+									<img src="" style="width:100%; height: 270px; object-fit: cover;">
+									<div class="content">
+										<h6 style="font-family: serif; margin-top: 0px; font-size: 21px;"></h6>
+										<p style="margin-top: -30px;"></p>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+							<div id="my_dataviz" style="width: 45%; height:270px; background-color: #f5f5f5;">
+								<!-- <img src="/static/mountain.jpeg" id = "wordcloudimg"> -->
+							</div>
+						
+				</div>
+				
+			</div>
+
+			<h1 style="text-align: center; margin-top: -45px; font-family: serif;"> CNN</h1>
+			<hr style="border: 1px dotted black;">
+			<div class = "flex-container">
+				<div class="cnn-newsarticle" id = "cnn1" style="cursor: pointer; padding-bottom: 10px;">
+					<img src="" class="articleimg">
+					<p class="articleheading"><b> Heading text </b></p>
+					<p class="articlecontent" style="padding-bottom: 10px; margin-bottom:10px;"></p>
+				</div>
+				<div class="cnn-newsarticle" id = "cnn2" style="cursor: pointer; padding-bottom: 10px;">
+					<img src="" class="articleimg">
+					<p class="articleheading"><b> Heading text </b></p>
+					<p class="articlecontent" style="padding-bottom: 10px; margin-bottom:10px;"></p>
+				</div>
+				<div class="cnn-newsarticle" id = "cnn3" style="cursor: pointer; padding-bottom: 10px;">
+					<img src="" class="articleimg">
+					<p class="articleheading"><b> Heading text </b></p>
+					<p class="articlecontent" style="padding-bottom: 10px; margin-bottom:10px;"></p>
+				</div>  
+				<div class="cnn-newsarticle" id = "cnn4" style="cursor: pointer; padding-bottom: 10px;">
+					<img src="" class="articleimg">
+					<p class="articleheading"><b> Heading text </b></p>
+					<p class="articlecontent" style="padding-bottom: 10px; margin-bottom:10px;"></p>
+				</div> 
+			</div>
+
+
+			<h1 style="text-align: center;"> FOX NEWS</h1>
+			<hr style="border: 1px dotted black;">
+			<div class = "flex-container">
+				<div class="fox-newsarticle" id = "fox1" style="cursor: pointer; padding-bottom: 7px;">
+					<img src="/static/mountain.jpeg" class="articleimg">
+					<p class="articleheading"><b> Heading text </b></p>
+					<p class="articlecontent" style="padding-bottom: 7px; margin-bottom:5px;"></p>
+				</div>
+				<div class="fox-newsarticle" id = "fox2" style="cursor: pointer; padding-bottom: 7px;">
+					<img src="/static/mountain.jpeg" class="articleimg">
+					<p class="articleheading"><b> Heading text </b></p>
+					<p class="articlecontent" style="padding-bottom: 7px; margin-bottom:5px;"></p>
+				</div>
+				<div class="fox-newsarticle" id = "fox3" style="cursor: pointer; padding-bottom: 7px;">
+					<img src="/static/mountain.jpeg" class="articleimg">
+					<p class="articleheading"><b> Heading text </b></p>
+					<p class="articlecontent" style="padding-bottom: 7px; margin-bottom:5px;"></p>
+				</div>  
+				<div class="fox-newsarticle" id = "fox4" style="padding-bottom: 7px; cursor: pointer;">
+					<img src="/static/mountain.jpeg" class="articleimg">
+					<p class="articleheading"><b> Heading text </b></p>
+					<p class="articlecontent" style="margin-bottom:5px;padding-bottom: 7px;"></p>
+				</div>  
+			</div>
+
+		</div>
+		<div id="wrapper2" style="display: none;">
+			<div id="formdiv">
+				<form name="searchForm" id="searchForm" onsubmit="return false;">
+					<div id="formrow1" class = "formrow">
+						<label for="keyword">  Keyword  <span class="req" style="margin-right: 5px;">*</span></label>
+						<input type="text" id="keyword" placeholder="" value = "" name="keyword" style="margin-right: 5px;" required autofocus>
+						<label for="from" style="margin-left: 5px;">  From  <span class="req" style="margin-right: 5px;">*</span></label>
+						<input type="date" id="from" placeholder="" style="margin-right: 5px;" name="datefrom" value = fromdate() required>
+						<label for="to" style="margin-left: 5px;">  To  <span class="req" style="margin-right: 5px;">*</span></label>
+						<input type="date" id="to" placeholder="" name="dateto" style="margin-right: 5px;" value = "todate()" required>
+					</div>
+					<div id = "formrow2" class="formrow">
+						<label for="category" style="margin-right: 5px;">  Category   </label>
+						<select for="category" id="category" name="category" onchange = "getSources()" value = "all" style="text-align: center;">
+							<option value = "all"> all </option>
+							<option value = "business"> Business </option>
+							<option value = "entertainment"> Entertainment </option>
+							<option value = "general"> General </option>
+							<option value = "health"> Health </option>
+							<option value = "science"> Science </option>
+							<option value = "sports"> Sports </option>
+							<option value = "technology"> Technology </option>
+						</select>
+						<label for="source" style="margin-right: 5px;">  Source  </label>
+						<select for="source" id="source" name="source" value = "all" style="text-align: center;">
+							<option value = "all"> all </option>
+							
+						</select>
+					</div>
+					<div id = "formrow3" class="formrow">
+						<span>
+							<button type = "submit" id="submit" class="formbtn" onclick="json_search()" style="font-size: 16px;">Search</button>
+							<button id="clear" type="reset" class="formbtn" onclick="clearall()" style="font-size: 16px;">Clear</button>
+						</span>
+					</div>
+				</form>
+			</div>
+			<br>
+			<div class="searchnews">
+				<div id="ell" class="singlesearch" style="display:none; cursor: pointer;">
+					<img src="/static/mountain.jpeg" class="searchimg" onclick="expand(this)"style="width:15%; height:100px; display:none; padding: 8px;">
+
+					<div class="searchcontent" onclick="expand(this)" style="width:85%; padding-right:0px; margin-right:5px;display:none; font-size: 14px;">
+						
+						<h4 style="font-size: 16px; margin-top: 4px; margin-right: 10px; padding-right: 10px; margin-bottom: -10px;">Heading</h4>
+						<p class="author" style="display:none; margin-bottom: -10px;"> <b>Author: </b></p>
+						<p class="articlesource" style="display:none; margin-bottom: -10px;"><b>Source: </b></p>
+						<p class="articledate" style="display:none; margin-bottom: -10px;"><b>Date: </b></p>
+						<p class="articledesc" style="margin-right: 20px; display: none;"> </p>
+						<p class="articledesctrunc truncate" style="margin-right: 20px;margin-bottom: -10px;"> </p>
+						<a href = "#" class="fullpost" style="display:none;" target="_blank">See Original Post </a>
+					</div>
+					<div style="width:3%; margin-top:5px; display:none; height: 5%; cursor: pointer;color: purple;" id="closing" class="closing" onclick="closetab(this)">&times;
+					</div>
+
+				</div>
+				
+			</div>
+			<div style="text-align: center; display: none" id = "nores" class="nores">
+				No Results 
+			</div>
+				<button name = "showmore" id="showmore" value = "showmore" onclick = "showmore()" style="display:none; cursor: pointer;"> Show More </button>
+				<button name = "showless" id="showless" value = "showless" onclick = "showless()" style="display:none; cursor: pointer;"> Show Less </button>
+			
+			</div>
+
+				
+	</div>
+</body>
+
+<script type="text/javascript">
+
+
+	// clear form function //
+	function clearall(){
+		setTimeout(function(){
+		var ele =  document.getElementsByClassName("singlesearch");
+		for(var i =0;i<ele.length; i++){
+			ele[i].style.display="none";
+
+		}
+		document.getElementById("showmore").style.display = "none";
+		document.getElementById('showless').style.display = "none";
+		document.getElementById("nores").style.display = "none";
+		document.getElementById("to").value = todate();
+		var d = new Date();
+		document.getElementById("from").value = fromdate();
+		console.log(new Date());
+		document.getElementById("category").value = "all";
+		document.getElementById("source").value = "all";
+		getSources();
+	},10);
+
+		// document.forms["searchForm"]["keyword"].value = " ";
+	}
+		// function expand(idd){
+		// 	var el = document.getElementById(idd);
+		// 	if(el.style["height"] == "auto"){
+		// 		el.style["height"] = "150px";
+				
+	 //          el.getElementsByClassName("author")[0].style.display = "none";
+	 //          el.getElementsByClassName("articlesource")[0].style.display = "none";
+	 //          el.getElementsByClassName("articledate")[0].style.display = "none";
+	 //          el.getElementsByClassName("fullpost")[0].style.display = "none";
+	 //      }
+		// 	else{
+		// 		el.style["height"] = "auto";
+
+			  
+	 //          el.getElementsByClassName("author")[0].style.removeProperty('display');
+	 //          el.getElementsByClassName("articlesource")[0].style.removeProperty('display');
+	 //          el.getElementsByClassName("articledate")[0].style.removeProperty('display');
+	 //          el.getElementsByClassName("fullpost")[0].style.removeProperty('display');
+	 //        }
+		// }
+
+		function expand(par){
+            console.log("EXPAND");
+            par.style.removeProperty('display')
+            var el = par.parentNode;
+	        el.style["height"] = "auto";
+	        el.getElementsByClassName("author")[0].style.removeProperty('display');
+	        el.getElementsByClassName("articlesource")[0].style.removeProperty('display');
+
+	        el.getElementsByClassName("articledate")[0].style.removeProperty('display');
+	        el.getElementsByClassName("fullpost")[0].style.removeProperty('display');
+	        el.getElementsByClassName("closing")[0].style.removeProperty('display');
+	        el.getElementsByClassName("articledesc")[0].style.removeProperty('display');
+	        el.getElementsByClassName("articledesctrunc")[0].style.display = "none";
+	        // el.getElementsByClassName("articledesc")[0].style.overflow = "visible";
+	        // el.getElementsByClassName("articledesc")[0].style.whiteSpace = "normal";
+	        // el.getElementsByClassName("articledesc")[0].style.removeProperty("overflow");
+	       
+
+	    }
+      
+          function closetab(chld){
+          	var el = chld.parentNode;
+            if(el.style["height"] == "auto"){
+              el.style["height"] = "110px";
+
+            
+                el.getElementsByClassName("author")[0].style.display = "none";
+                el.getElementsByClassName("articlesource")[0].style.display = "none";
+                el.getElementsByClassName("articledate")[0].style.display = "none";
+                el.getElementsByClassName("fullpost")[0].style.display = "none";
+                el.getElementsByClassName("closing")[0].style.display = "none";
+                // el.getElementsByClassName("articledesc")[0].style.overflow="hidden";
+                // el.getElementsByClassName("articledesc")[0].style.whiteSpace = "nowrap";
+                el.getElementsByClassName("articledesctrunc")[0].style.removeProperty('display');
+	        	el.getElementsByClassName("articledesc")[0].style.display = "none";
+
+
+            }
+          
+          }
+        
+          function fromdate(){
+          	// var d = new Date();
+          	var d = new Date(todate());
+          	d.setDate(d.getDate() - 7);
+          	return d.toISOString().substring(0,10);
+          }
+          function todate(){
+          	var dt = new Date()
+          	console.log(dt);
+          	var mon = dt.getMonth()+1;
+          	if(mon.toString().length < 2){
+          		mon = "0"+mon;
+          	}
+          	var dy = dt.getDate();
+          	if(dy.toString().length < 2){
+          		dy = "0"+dy;
+          	}
+          	return dt.getFullYear()+'-'+mon+'-'+dy;
+
+          }
+          var t = todate();
+          console.log(t);
+		document.getElementById("to").value = t;
+		document.getElementById("from").value = fromdate();
+		console.log(new Date());
+
+
+
+
+
+		var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          
+          slides[slideIndex-1].style.display = "block";  
+          setTimeout(showSlides, 2000); // Change image every 2 seconds
+          
+        }
+
+        function searchFun(){
+        	getSources();
+        	document.getElementById("searchButton").style.background = "grey";
+
+        	document.getElementById("searchButton").style.color = "white";
+        	document.getElementById("googleNewsButton").style.background = "white";
+        	document.getElementById("googleNewsButton").style.color = "black";
+        	document.getElementById("googleNewsButton").onmouseover = function(){
+
+        		document.getElementById("googleNewsButton").style.background = "#44A84C";
+        		document.getElementById("googleNewsButton").style.color = "white";
+        	}
+        	document.getElementById("googleNewsButton").onmouseout = function(){
+
+        		document.getElementById("googleNewsButton").style.background = "white";
+        		document.getElementById("googleNewsButton").style.color = "black";
+        	}
+
+        	document.getElementById("searchButton").onmouseover = function(){
+
+        		document.getElementById("searchButton").style.background = "#44A84C";
+        		document.getElementById("searchButton").style.color = "white";
+        	}
+        	document.getElementById("searchButton").onmouseout = function(){
+
+        		document.getElementById("searchButton").style.background = "grey";
+        		document.getElementById("searchButton").style.color = "white";
+        	}
+        	document.getElementById("wrapper").style.display = "none";
+        	document.getElementById("wrapper2").style.display = "block";
+        	
+        }
+        function googleNewFun(){
+        	document.getElementById("googleNewsButton").style.background = "grey";
+        	document.getElementById("googleNewsButton").style.color = "white";
+        	document.getElementById("searchButton").style.background = "white";
+        	document.getElementById("searchButton").style.color = "black";
+        	document.getElementById("searchButton").onmouseover = function(){
+
+        		document.getElementById("searchButton").style.background = "#44A84C";
+        		document.getElementById("searchButton").style.color = "white";
+        	}
+        	document.getElementById("searchButton").onmouseout = function(){
+
+        		document.getElementById("searchButton").style.background = "white";
+        		document.getElementById("searchButton").style.color = "black";
+        	}
+        	document.getElementById("googleNewsButton").onmouseover = function(){
+
+        		document.getElementById("googleNewsButton").style.background = "#44A84C";
+        		document.getElementById("googleNewsButton").style.color = "white";
+        	}
+        	document.getElementById("googleNewsButton").onmouseout = function(){
+
+        		document.getElementById("googleNewsButton").style.background = "grey";
+        		document.getElementById("googleNewsButton").style.color = "white";
+        	}
+        	document.getElementById("wrapper").style.display = "block";
+        	document.getElementById("wrapper2").style.display = "none";
+        	
+        }
+
+        myWords = [];
+        var xhttptopstopwords = new XMLHttpRequest();
+        var myWordsNew = [{word: "hello", size: "2"}];
+
+	  	xhttptopstopwords.onreadystatechange = function() {
+	  		
+		    if (this.readyState == 4 && this.status == 200) {
+		      console.log("response");
+		      console.log(JSON.parse(this.responseText));
+		      console.log("response end");
+		      var stopWordsCount = JSON.parse(this.responseText);
+		      console.log(stopWordsCount);
+		      
+		      // var stopWordKeys = Object.keys(stopWordsCount);
+		      for(var i = 0; i < stopWordsCount.length; i++){
+		        myWords.push({word: stopWordsCount[i][0], size: stopWordsCount[i][1].toString()});
+		        
+		      }
+		      	 
+		    
+		    console.log(myWords);
+		    var newwidth = document.getElementById("my_dataviz").clientWidth;
+		    var newheight = document.getElementById("my_dataviz").clientHeight;
+		// myWords = myWordsNew;
+			var margin = {top: 0, right: 0, bottom: 0, left: 0},
+			    width = newwidth;
+			    height = newheight;
+
+			// append the svg object to the body of the page
+			var svg = d3.select("#my_dataviz").append("svg")
+			    
+			    .attr("width", width)
+			    .attr("height", height)
+			  .append("g")
+			    .attr("transform",
+			          "translate(" + margin.left + "," + margin.top + ")");
+
+			// Constructs a new cloud layout instance. It run an algorithm to find the position of words that suits your requirements
+			// Wordcloud features that are different from one word to the other must be here
+			console.log(myWords.map(function(d) { return {text: d.word, size:d.size}; }));
+			wordlist = myWords.map(function(d) { return {text: d.word, size:d.size}; })
+			var layout = d3.layout.cloud()
+			  .size([width, height])
+			  .words(wordlist)
+			  .padding(5)        //space between words
+			  .rotate(function() { return ~~(Math.random() * 2) * 90; })
+			  .fontSize(function(d) { return 8.4*(d.size); })      // font size of words
+			  .on("end", draw);
+			layout.start();
+
+			// This function takes the output of 'layout' above and draw the words
+			// Wordcloud features that are THE SAME from one word to the other can be here
+			function draw(words) {
+			  svg
+			    .append("g")
+			      .attr("transform", "translate(" + layout.size()[0] / 2 + "," + layout.size()[1] / 2 + ")")
+			      .selectAll("text")
+			        .data(words)
+			      .enter().append("text")
+			        .style("font-size", function(d) { return d.size + "px"; })
+			        .style("fill", "black")
+			        .style("background-color", "#f5f5f5")
+			        .attr("text-anchor", "middle")
+			        .style("font-family", "Impact")
+			        .attr("transform", function(d) {
+			          return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+			        })
+			        .text(function(d) { return d.text; });
+			}
+		}
+
+		};
+	  
+		xhttptopstopwords.open("GET", "/top-stopwords", true);
+		xhttptopstopwords.send();
+
+		
+
+
+
+
+
+        // List of words
+		// var myWords = [{word: "Running", size: "10"}, {word: "Surfing", size: "20"}, {word: "Climbing", size: "50"}, {word: "Kiting", size: "30"}, {word: "Sailing", size: "20"}, {word: "Snowboarding", size: "60"} ]
+
+		// set the dimensions and margins of the graph
+		
+
+		// getting all stopwords
+
+
+		
+  
+		
+	</script>
+</html>

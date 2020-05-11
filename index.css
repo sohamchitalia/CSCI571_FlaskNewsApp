@@ -1,0 +1,466 @@
+html{
+  overflow-y: scroll;
+  font-family: serif;
+}
+body{
+  font-family: serif;
+  font-variant: Georgia;
+}
+
+#outerwrapper{
+  margin-left:auto;
+    margin-right:auto;
+    width:69%;
+}
+
+#wrapper{
+	margin-left:auto;
+    margin-right:auto;
+    width:78%;
+    margin-left: 15%;
+    top:5%;
+    /*position: relative;
+*/
+}
+
+#wrapper2{
+  margin-left:auto;
+  margin-right:auto;
+  width:78%;
+  margin-left: 15%;
+  display: hidden;
+  top: -6%;
+
+}
+#buttons{
+  position: fixed;
+  /*float: left;*/
+  /*left:20%;
+  top:20%;*/
+  width:10%;
+  top:5%;
+  /*÷transform: translate(-70%,10%);*/
+}
+
+.btn-group button {
+  background-color: #f5f5f5; /* Green background */
+  border: 1px solid lightgrey; /* Green border */
+  color: black; /* White text */
+  padding: 8px 14px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  width: 90%; /* Set a width if needed */
+  display: block; /* Make the buttons appear below each other */
+  font-size: 12px;
+  
+}
+
+.btn-group button:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #44A84C;
+  color: white;
+  transition: background-color 0.20s linear;
+}
+#googleNewsButton{
+  border-top-left-radius: 5px; 
+  border-top-right-radius: 5px; 
+  background-color: grey; 
+  color: white;
+}
+#googleNewsButton:hover{
+  background-color: #44A84C;
+  color: white;
+  transition: background-color 0.20s linear;
+
+}
+
+#firstsection{
+  width:102%;
+  height:400px;
+}
+
+/*#firstsectiontable{
+  border: 0px solid black;
+  width: 100%;
+  margin:auto;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  height:350px;
+}
+
+#firstsectiontable #slider{
+  width: 60%;
+  height: 350px;
+  margin: 5px;
+  border:1px solid black;
+  overflow: hidden;
+
+}*/
+
+.flex-container2 {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  height:270px;
+  padding:20px;
+}
+
+.flex-container2 > div {
+  
+  
+  margin: 5px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+
+ 
+
+}
+
+
+/*#firstsectiontable #wordcloud{
+  padding-left:5px;
+  padding-right:5px;
+  width:40%;
+  border: 1px solid black;
+}*/
+
+/*FOR SLIDE SHOW*/
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none; height:270px;}
+img {vertical-align: middle; height:270px;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+/*.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}*/
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+/*.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}*/
+
+/*@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}*/
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+.imgtext {
+  position: relative;
+  max-width: 800px; /* Maximum width */
+  margin: 0 auto; /* Center it */
+  padding-bottom: 10px;
+}
+
+.imgtext .content {
+  position: absolute; /* Position the background text */
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  /*height: 150px;*/
+  font-size: 15px;
+  overflow: hidden;
+  padding: 10px;
+
+
+  line-height: 20px;
+}
+.imgtext .content h6{
+
+  font-size: 15px;
+  bottom: 140px;
+}
+
+.imgtext .content p{
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  bottom: 20px;
+  height:80%;
+  
+}
+/*END OF SLIDE SHOW*/
+
+
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  height:400px;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 25%;
+  margin: 5px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  box-shadow: 2px 1px lightgrey;
+  overflow: hidden;
+
+}
+
+.articleimg{
+  width: 100%;
+  top:0px;
+  height:40%;
+  border-radius: 5px;
+}
+
+.cnn-newsarticle{
+  overflow: hidden;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  
+}
+
+.cnn-newsarticle .articlecontent{
+  font-size: 12px;
+}
+
+.fox-newsarticle .articlecontent{
+  font-size: 12px;
+}
+
+.articleheading, .articlecontent{
+  text-align: center;
+  font-size: 14px;
+  line-height: 15px;
+  padding:5px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  /*padding: 7px;*/
+
+}
+
+.articlecontent p{
+  overflow: hidden;
+  margin:15px;
+  padding-bottom: 10px;
+  bottom: 15px;
+}
+
+.articlheading{
+  font-weight: bold
+}
+
+#formdiv{
+  margin-top:40px;
+  background-color: #f5f5f5;
+  padding-top:10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.formrow{
+  /*margin-top:10px;*/
+  padding-top: 5px;
+  padding:1px;
+
+}
+.req{
+  color: red;
+
+}
+#formrow1{
+  margin-bottom: 15px;
+}
+
+.formbtn{
+  font-family: serif;
+  font-variant: Georgia;
+  /*display: inline;*/
+  margin-left: 5px;
+  margin-right: 5px;
+  border: none ;
+  padding:6px 14px;
+  margin-top: 10px;
+  text-align: center;
+  background-color: #f0f0f0;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+
+}
+
+.formbtn:hover{
+  background-color: #44A84C;
+  color: white;
+  transition: background-color 0.20s linear;
+}
+
+#category{
+  margin-right:30px;
+  text-align: center
+}
+
+input:focus{
+
+  border-radius: 1px;
+  border: 1px solid red;
+
+}
+
+
+/* SEARCH NEWS  */
+.searchnews{
+  text-align: center;
+
+
+}
+#buttons{
+  font-family: serif;
+  font-variant: Georgia;
+  text-align: center;
+
+}
+
+.singlesearch{
+  font-family: serif;
+  font-variant: Georgia;
+  display: flex;
+  flex-direction: row;
+  background-color: #f5f5f5;
+  margin: 10px;
+  border: 1px solid lightgrey; 
+  height:110px;
+  text-align: center;
+  border-radius: 5px;
+  padding:5px;
+  overflow: hidden;
+  overflow-x: hidden;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+
+  
+  
+}
+.searchcontent{
+  font-family: serif;
+  font-variant: Georgia;
+  padding-left: 5px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  padding-top: -10px;
+  margin-top :0px;
+  text-align: left;
+  word-break: break-word;
+  overflow: hidden;
+   overflow-x: hidden;
+
+  
+  
+}
+.searchcontent .articledesc{
+  font-family: serif;
+  font-variant: Georgia;
+  /*overflow: hidden;
+   text-overflow: ellipsis;
+   word-break: break-word;
+   white-space: nowrap;
+   word-wrap: break-word;*/
+   overflow: hidden;
+   overflow-x: hidden;
+}
+
+
+.singlesearch:hover{
+  transition: top ease 0.5s;
+  box-shadow: 6px 6px 12px #ccc
+}
+
+
+
+#showmore, #showless{
+  font-family: serif;
+  font-variant: Georgia;
+  margin-left: 45%;
+  margin-right: 55%;
+  width: 15%;
+  border: none ;
+  padding:10px 10px;
+  margin-top: 10px;
+  text-align: center;
+  background-color: #f5f5f5;
+  text-decoration: none;
+  /*display: inline-block;*/
+  font-size: 15px;
+
+}
+
+#showmore:hover{
+  background-color: #44A84C;
+  color: white;
+  transition: background-color 0.20s linear;
+}
+
+
+#showless:hover{
+  background-color: #44A84C;
+  color: white;
+  transition: background-color 0.20s linear;
+}
+
